@@ -6,7 +6,7 @@
 /*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 17:38:31 by febranda          #+#    #+#             */
-/*   Updated: 2025/07/24 17:51:48 by febranda         ###   ########.fr       */
+/*   Updated: 2025/07/24 19:04:05 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 size_t	ft_strlen(const char *s);
 char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 
 #endif
