@@ -6,7 +6,7 @@
 /*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 17:38:31 by febranda          #+#    #+#             */
-/*   Updated: 2025/07/25 18:23:10 by febranda         ###   ########.fr       */
+/*   Updated: 2025/07/26 13:00:05 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 
 #endif
