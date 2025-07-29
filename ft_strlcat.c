@@ -6,7 +6,7 @@
 /*   By: febranda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 15:21:52 by febranda          #+#    #+#             */
-/*   Updated: 2025/07/29 19:18:59 by febranda         ###   ########.fr       */
+/*   Updated: 2025/07/29 19:25:23 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,3 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	*(dest + dest_len) = '\0';
 	return (dest_len + src_len);
 }
-
-//Concatena strings
-//dst precisa ter pelo menos um byte libre.
-//um byte para NUL deve ser incluído em size.
-//As duas src e dst devem ser strings verdadeiras terminadas em NUL.
-//
-
-//Retorna o comprimento total da string que ela tentou criar, 
-// ou seja o comprimento de src.
