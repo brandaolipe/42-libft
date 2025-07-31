@@ -6,7 +6,7 @@
 /*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 17:48:57 by febranda          #+#    #+#             */
-/*   Updated: 2025/07/24 17:45:20 by febranda         ###   ########.fr       */
+/*   Updated: 2025/07/31 13:28:21 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strchr(const char *s, int c)
 		}
 		s++;
 	}
-	if (c == '\0')
+	if ((char)c == '\0')
 	{
 		return ((char *)s);
 	}
