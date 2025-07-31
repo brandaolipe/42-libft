@@ -6,7 +6,7 @@
 /*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 19:28:45 by febranda          #+#    #+#             */
-/*   Updated: 2025/07/25 17:58:54 by febranda         ###   ########.fr       */
+/*   Updated: 2025/07/31 13:08:21 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	while (big[i] && i < len)
 	{
 		j = 0;
-		while (big[i + j] == little[j] && i + j < len)
+		while (big[i + j] == little[j] && i + j < len && little[j] != '\0')
 		{
 			j++;
 		}
