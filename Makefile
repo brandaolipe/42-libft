@@ -24,7 +24,9 @@ SRCS = ft_isalpha.c \
 	ft_memmove.c \
 	ft_memcpy.c \
 	ft_strdup.c \
-	ft_calloc.c	
+	ft_calloc.c \
+	ft_substr.c
+
 OBJS = $(SRCS:.c=.o)
 
 CC = cc

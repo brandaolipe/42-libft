@@ -6,7 +6,7 @@
 /*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 17:38:31 by febranda          #+#    #+#             */
-/*   Updated: 2025/07/31 19:28:38 by febranda         ###   ########.fr       */
+/*   Updated: 2025/08/01 14:16:38 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 char	*ft_strdup(const char *s);
 void	*ft_calloc(size_t nmenb, size_t size);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
