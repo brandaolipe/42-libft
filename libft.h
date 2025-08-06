@@ -6,7 +6,7 @@
 /*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 17:38:31 by febranda          #+#    #+#             */
-/*   Updated: 2025/08/05 19:08:50 by febranda         ###   ########.fr       */
+/*   Updated: 2025/08/06 19:13:32 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,11 @@ char	*ft_itoa(int n);
 char	*ft_strtrim(char const *s1, char const *set);
 
 t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+int		ft_lstsize(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
+int		ft_lstsize(t_list *lst);
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
 
 #endif
