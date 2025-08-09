@@ -14,19 +14,17 @@
 #include <stdio.h>
 
 static size_t	ft_word_count(char const *s, char c);
-static char	*ft_get_word(char const *s, int end);
+static char	*ft_get_word(char const *s, size_t end);
 
 char	**ft_split(char const *s, char c)
 {
 	char	**array;
-	size_t	nb_words;
 	size_t	i;
 	size_t	j;
 
-	if (!s || !c)
+	if (!s)
 		return (NULL);
-	nb_words = ft_word_count(s, c);
-	array =(char **)malloc(nb_words + 1 * sizeof(char *));
+	array =(char **)malloc((ft_word_count(s, c) + 1) * sizeof(char *));
 	if (!array)
 		return (NULL);
 	j = 0;
@@ -39,19 +37,22 @@ char	**ft_split(char const *s, char c)
 		{
 			while (s[i] && s[i] != c)
 				i++;
-			array[j++] = ft_get_word(s, i);
+			array[j++] = ft_get_word(s, i + 1);
+			s += i;
 		}
 	}
 	array[j] = NULL;
 	return (array);
 }
 
-static char	*ft_get_word(char const *s, int end)
+static char	*ft_get_word(char const *s, size_t size)
 {
 	char	*word;
 
-	word = malloc(end + 1);
-	ft_strlcpy(word, s, end);
+	word = malloc(size);
+	if (!word)
+		return (NULL);
+	ft_strlcpy(word, s, size);
 	return (word);
 }
 
@@ -84,6 +85,6 @@ str1 = ft_split(str, ' ');
 int i = 0;
 while (i < nb)
 {
-	printf("%s palavras\n", str1[i++]);
+	printf("%s\n", str1[i++]);
 }
 }
