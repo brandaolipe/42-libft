@@ -6,15 +6,14 @@
 /*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/07 14:48:34 by febranda          #+#    #+#             */
-/*   Updated: 2025/08/07 20:04:36 by febranda         ###   ########.fr       */
+/*   Updated: 2025/08/10 18:28:14 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static size_t	ft_word_count(char const *s, char c);
-static char	*ft_get_word(char const *s, size_t end);
+static char		*ft_get_word( char const *s, size_t end);
 
 char	**ft_split(char const *s, char c)
 {
@@ -24,7 +23,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	array =(char **)malloc((ft_word_count(s, c) + 1) * sizeof(char *));
+	array = (char **)malloc((ft_word_count(s, c) + 1) * sizeof(char *));
 	if (!array)
 		return (NULL);
 	j = 0;
@@ -71,20 +70,4 @@ static size_t	ft_word_count(char const *s, char c)
 			s++;
 	}
 	return (counter);
-}
-
-int     main(void)
-{
-  char c = ' ';
-  char    str[] = "Lorem Ipsum is simply text of the printing";
-  int     nb = ft_word_count(str, c);
-  char	**str1;
-
-str1 = ft_split(str, ' ');
-
-int i = 0;
-while (i < nb)
-{
-	printf("%s\n", str1[i++]);
-}
 }
